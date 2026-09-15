@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #app {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+  background: #0b1120;
+  color: #e2e8f0;
+}
+
+/* Three.js label styles */
+.device-label {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.device-label-inner {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  color: #38bdf8;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.25);
+  backdrop-filter: blur(4px);
+}
+
+.device-label::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid rgba(56, 189, 248, 0.5);
+}
+
+.scene-container canvas {
+  display: block;
+  outline: none;
+}
+
+/* ElementPlus dark overrides */
+.el-drawer {
+  background: rgba(15, 23, 42, 0.95) !important;
+  border-left: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.el-card {
+  background: rgba(30, 41, 59, 0.6) !important;
+  border: 1px solid rgba(148, 163, 184, 0.15) !important;
+  color: #e2e8f0;
+}
+
+.el-card__header {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15) !important;
+}
+
+.el-table {
+  background: transparent !important;
+  --el-table-row-hover-bg-color: rgba(56, 189, 248, 0.08);
+}
+
+.el-table th,
+.el-table tr,
+.el-table td {
+  background: transparent !important;
+  color: #e2e8f0;
+}
+
+.el-menu {
+  border-right: none !important;
+}
